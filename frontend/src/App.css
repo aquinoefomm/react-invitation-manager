@@ -1,0 +1,101 @@
+/* App.css */
+body {
+  background-image: url('./party-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust this as needed */
+}
+
+h1{
+  
+  color: #14671b;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+table{
+  width: 90%;
+}
+/* Styling for the table */
+.table-container {
+  font-family: Arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Styling for table header */
+.table-container th {
+  background-color: #14671b; /* Green */
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+/* Styling for table rows */
+.table-container td {
+  background-color: #edf9ee;
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styling for alternating rows */
+/* .table-container tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light grey */
+/*} */
+
+/* Hover effect for rows */
+.table-container tr:hover {
+  background-color: #ddd; /* Grey */
+}
+
+/* Responsive table styling */
+@media screen and (max-width: 600px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+.links{
+  padding: 5px;
+}
+
+.button-link{
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #14671b;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 5px;
+}
+
+.button-link:hover{
+  color: rgb(28, 8, 158);
+  background-color: white;
+  
+}
+
+.button-link a{
+  color: white;
+  text-decoration: none;
+  font-size: 25px; 
+}
+
+.button-link a:hover{
+  color: #14671b;
+  
+}
