@@ -48,10 +48,7 @@ function GuestList(){
         return <Guest key={index} name={item.name} age={item.age} checkedIn={item.present? "✅" : "❌"} id={item.id} />
       })}
       </table>
-      </div>
-      <div>
-      <button className="button-link"><Link to="/" element={<Home/>}>Voltar ao início</Link></button>
-    
+      <button className=""><Link to="/" element={<Home/>}>Voltar ao início</Link></button>
       </div>
       </div>
   )

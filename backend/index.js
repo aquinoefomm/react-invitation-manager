@@ -49,7 +49,21 @@ app.get('/people/:id', async (req, res) => {
     res.json(result.rows);
 })
 
-// app.post(){}
+app.post("/people/post", async (req, res) => {
+    const {name, age, present} = req.body;
+
+    try {
+        await db.query("INSERT INTO people_invited (name, age, present) VALUES ($1,$2,$3)", 
+            [name, age, present])
+            res.status(200).json({
+                message: "Person inserted successfully",
+                data: {name, age, present}
+            })
+    } catch(error){
+        console.log(error);
+        res.status(500).json({message: 'Server error'});
+    }
+})
 
 app.put("/people/:id", async (req, res) => {
     const { id } = req.params;
