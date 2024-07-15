@@ -30,9 +30,8 @@ db.connect()
 
 let people = []
 
-app.get('/people', (req, res) => {
-
-    db.query("SELECT * FROM people_invited", async (err, res) => {
+app.get('/api/people', (req, res) => {
+    db.query("SELECT * FROM people_invited ORDER BY name", async (err, res) => {
         if (err) {
             console.error("Error executing query", err.stack);
         } else {
@@ -42,16 +41,15 @@ app.get('/people', (req, res) => {
     res.json(people);
 })
 
-app.get('/people/:id', async (req, res) => {
+app.get('/api/people/:id', async (req, res) => {
     const id = req.params.id;
     const result = await db.query("SELECT * FROM people_invited WHERE id = $1", [id])
     console.log(result)
     res.json(result.rows);
 })
 
-app.post("/people/post", async (req, res) => {
+app.post("/api/people/post", async (req, res) => {
     const {name, age, present} = req.body;
-
     try {
         await db.query("INSERT INTO people_invited (name, age, present) VALUES ($1,$2,$3)", 
             [name, age, present])
@@ -65,7 +63,7 @@ app.post("/people/post", async (req, res) => {
     }
 })
 
-app.put("/people/:id", async (req, res) => {
+app.put("/api/people/:id", async (req, res) => {
     const { id } = req.params;
     const {name, age, present} = req.body;
     try{
@@ -78,8 +76,6 @@ app.put("/people/:id", async (req, res) => {
         console.error("Error updating register", err);
         res.status(500).json({message: 'Server error'});
     }
-     
-    
 });
 
 app.listen(port, () => {

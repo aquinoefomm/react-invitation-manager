@@ -2,7 +2,7 @@
 body {
   background-image: url('./party-image.jpg');
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   height: 100vh; /* Adjust this as needed */
 }
 
@@ -16,7 +16,7 @@ h1{
 .container{
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -98,4 +98,120 @@ table{
 .button-link a:hover{
   color: #14671b;
   
+}
+
+.counter{
+  display: flex;
+  flex-direction: column;
+  color: #14671b;
+  background-color: white;
+  font-weight: bolder;
+  pad: 5px;
+  border-radius: 10px;
+  width: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo básico para os ícones */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  gap: 20px; /* Espaçamento entre os ícones */
+  margin-top: 20px; /* Margem superior */
+}
+
+.social-icons a {
+  color: #14671b; /* Cor dos ícones */
+  text-decoration: none; /* Remove sublinhado dos links */
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+.social-icons a:hover {
+  color: #fff; /* Cor dos ícones ao passar o mouse */
+}
+
+p{
+  color: #0c5c13;
+  font-weight: bold;
+}
+
+.include-form{
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #dfb973;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+/* .form-group {
+  margin-bottom: 20px;
+} */
+
+.include-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 5px;
+}
+
+.include-form [type="text"], [type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.include-form select {
+  height: 40px;
+}
+
+.include-form button {
+  background-color: #0c5c13;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.include-form button:hover {
+  background-color: white;
+  color: #0c5c13;
+}
+
+.back-home{
+  background-color: #0c5c13;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+.back-home:hover{
+  background-color: white;
+  color: #0c5c13;
+}
+
+.back-home a{
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.back-home a:hover{
+  text-decoration: none;
+  color: #0c5c13;
 }
